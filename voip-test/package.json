@@ -1,0 +1,19 @@
+{
+  "name": "voip-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1",
+    "node-turn": "^0.0.6",
+    "ws": "^8.21.3"
+  }
+}

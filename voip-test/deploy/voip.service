@@ -1,0 +1,15 @@
+[Unit]
+Description=voip-test signaling+turn
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=__APPDIR__
+EnvironmentFile=__APPDIR__/deploy/voip.env
+ExecStart=/usr/bin/node server.js
+Restart=on-failure
+RestartSec=2
+User=ubuntu
+
+[Install]
+WantedBy=multi-user.target

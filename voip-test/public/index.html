@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VoIP test</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 48px; }
+    button { font-size: 20px; padding: 12px 28px; margin: 8px; }
+    input { font-size: 24px; padding: 10px; width: 8ch; text-align: center; letter-spacing: 4px; }
+    #codeDisplay { font-size: 40px; letter-spacing: 8px; font-weight: bold; margin: 12px; }
+    #status { margin-top: 20px; color: #555; }
+  </style>
+</head>
+<body>
+  <h2>2-device voice call</h2>
+
+  <div id="lobby">
+    <button id="showCodeBtn">Show code</button>
+    <button id="enterCodeBtn">Enter code</button>
+
+    <div id="showCodeBox" hidden>
+      <p>Enter this code on the other device:</p>
+      <p id="codeDisplay">------</p>
+    </div>
+
+    <div id="enterCodeBox" hidden>
+      <input id="codeInput" inputmode="numeric" maxlength="6" placeholder="000000" />
+      <button id="joinBtn">Connect</button>
+    </div>
+  </div>
+
+  <button id="hangupBtn" hidden>Hang up</button>
+  <p id="status">Loading mic...</p>
+  <audio id="remoteAudio" autoplay playsinline></audio>
+  <script src="client.js"></script>
+</body>
+</html>
